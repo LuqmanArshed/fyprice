@@ -1,0 +1,44 @@
+{% extends 'pages/base.html' %} {% load static %} {% block content %}
+
+<div class="container">
+  <div class="media align-items-stretch justify-content-center ht-100p">
+    <div class="sign-wrapper mg-lg-r-50 mg-xl-r-60">
+      <div class="pd-t-20 wd-100p">
+        <h4>Automated Rice Leaf Disease Detection</h4>
+        <p class="tx-color-03 tx-16 mg-b-40">
+          It's free of Cost Rice LEaf disease detetction software.
+        </p>
+        <a class="btn btn-brand-02" href="{% url 'upload' %}">Upload Image</a>
+        <!-- form-group -->
+
+        <button class="btn btn-brand-02 btn-block mg-t-20">Find Disease</button>
+      </div>
+    </div>
+    <!-- sign-wrapper -->
+    <div
+      class="
+        media-body
+        pd-y-30 pd-lg-x-50 pd-xl-x-60
+        align-items-center
+        d-none d-lg-flex
+        pos-relative
+      "
+    >
+      <div class="mx-lg-wd-500 mx-xl-wd-550">
+        <img src="{% static 'images/0365.JPG' %}" class="img-fluid" alt="" />
+      </div>
+    </div>
+    <!-- media-body -->
+  </div>
+  <!-- media -->
+  <div class="card mg-t-20">
+    <div class="card-header bg-danger"><h3>Results</h3></div>
+    <div class="card-body">
+      <h1>Bacterial blight is found</h1>
+    </div>
+  </div>
+
+  <a class="btn btn-brand-02" href="{% url 'train' %}">Train Model</a>
+</div>
+
+{% endblock %}
